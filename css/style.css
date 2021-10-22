@@ -71,3 +71,72 @@ a:visited{
     }
 }
 
+@media screen and (min-width: 850px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .card{
+        flex-basis: 250px;
+        z-index: -99;
+    }
+
+}
+
+@media (prefers-reduced-motion){
+    #logo{
+        animation: none;
+    }
+    
+}
+
+@media print{
+    body{
+        background-image: none;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pricing{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    .card{
+        border: #45ADDD;
+        flex-basis: 250px;
+    }
+
+    #gallery, .gallery{
+        display: none;
+    }
+
+    .card ul li:nth-child(odd):before{
+        content: "\1F44D";
+    }
+
+    .card ul li:nth-child(even):after{
+        content: "\1F44D";
+    }
+}
